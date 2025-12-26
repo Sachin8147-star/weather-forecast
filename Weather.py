@@ -6,9 +6,11 @@ import os
 # -----------------------------
 # CONFIGURATION
 # -----------------------------
-API_KEY = os.getenv("PASTE_YOUR_OPENWEATHER_API_KEY_HERE")   # API key
+API_KEY = os.getenv("OPENWEATHER_API_KEY")   # API key  "place your oprnweather api key here"
+if API_KEY is None:
+    raise ValueError("API key not found. set OPENWEATHER_API_KEY environmental variable.")
 CITY = "Delhi"
-URL = f"http://api.openweathermap.org/data/2.5/forecast?q={CITY}&appid={API_KEY}&units=metric"
+URL = f"https://api.openweathermap.org/data/2.5/forecast?q={CITY}&appid={API_KEY}&units=metric"
 
 # -----------------------------
 # FETCH DATA FROM API
@@ -21,6 +23,10 @@ data = response.json()
 # -----------------------------
 dates = []
 temperatures = []
+
+if "list" not in data:
+    print("API Error: ",data)
+    exit()
 
 for item in data["list"]:
     dates.append(item["dt_txt"])
