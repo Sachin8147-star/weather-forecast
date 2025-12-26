@@ -6,7 +6,7 @@ import os
 # -----------------------------
 # CONFIGURATION
 # -----------------------------
-API_KEY = os.getenv("OPENWEATHER_API_KEY")   # API key
+API_KEY = os.getenv("PASTE_YOUR_OPENWEATHER_API_KEY_HERE")   # API key
 CITY = "Delhi"
 URL = f"http://api.openweathermap.org/data/2.5/forecast?q={CITY}&appid={API_KEY}&units=metric"
 

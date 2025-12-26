@@ -8,3 +8,4 @@ using Matplotlib and Seaborn.
 ```bash
 pip install requests matplotlib seaborn
 python weather.py
+# weather-forecast
