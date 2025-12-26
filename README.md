@@ -6,6 +6,6 @@ using Matplotlib and Seaborn.
 
 ## Run
 ```bash
-pip install requests matplotlib seaborn
-python weather.py
+python pip install requests matplotlib seaborn
+python Weather.py
 # weather-forecast
