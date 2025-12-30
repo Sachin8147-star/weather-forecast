@@ -1,12 +1,12 @@
 import requests
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
 
 # -----------------------------
 # CONFIGURATION
 # -----------------------------
-API_KEY = os.getenv("OPENWEATHER_API_KEY")   # API key  "place your oprnweather api key here"
+API_KEY = "PUT_YOUR_OPENWEATHER_API_KEY_HERE"  # API key  "place your oprnweather api key here"
+
 if API_KEY is None:
     raise ValueError("API key not found. set OPENWEATHER_API_KEY environmental variable.")
 CITY = "Delhi"
